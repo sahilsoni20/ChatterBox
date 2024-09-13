@@ -33,30 +33,24 @@ export default function SignIn() {
 
   return (
     <Container>
-      <img
-        src="/home.png"
-        alt="A picture of a chat bubble with a girl in it."
-      />
+      <img src="/signin.jpeg" alt="Chat pic" />
       <Wrapper>
         <TextWrapper>
-          <h1>Chatify</h1>
-
+          <h1>ChatterBox</h1>
           <h2>
-            The best place for messaging It's free, fast and secure. We make it
-            easy and fun to stay close to your favourite people.
+            Experience seamless conversations with our secure, fast, and fun
+            messaging platform. Your favorite people are just a tap away.
           </h2>
         </TextWrapper>
-
         <ButtonWrapper>
           <button
             disabled={loading}
             onClick={() => handleSignIn(new GoogleAuthProvider())}
           >
-            Sign In With Google
+            Sign In with Google
           </button>
-
-          <a href="https://github.com/mirayatech" target="_blank">
-            Built & Designed by Miraya
+          <a href="https://github.com/sahilsoni20" target="_blank">
+            Built and desgin by Sahil Soni
           </a>
         </ButtonWrapper>
       </Wrapper>

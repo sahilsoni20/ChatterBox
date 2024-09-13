@@ -61,7 +61,7 @@ export function Sidebar() {
     try {
       await signOut(firebaseAuth);
       toast.success("User signed out successfully");
-    } catch (error) {
+    } catch {
       toast.error("Something went wrong");
     }
   };
@@ -83,7 +83,7 @@ export function Sidebar() {
             color: theme === "light" ? "#24292f" : "#fff",
           }}
         >
-          Chatify
+          ChatterBox
         </Link>
 
         <Wrapper theme={theme}>

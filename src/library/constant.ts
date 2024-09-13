@@ -1,10 +1,11 @@
 export const IMAGE_PROXY = (url: string) =>
-  `https://apoqrsgtqq.cloudimg.io/${url}`;
+  // `https://apoqrsgtqq.cloudimg.io/${url}`;
+      `https://cliajsljga.cloudimg.io/${url}`
 
 export const FILE_ICON = (extension: string) =>
   `https://cdn.jsdelivr.net/gh/napthedev/file-icons/file/${extension}.svg`;
 
-export const DEFAULT_AVATAR = "/empty-avatar.png";
+export const DEFAULT_AVATAR = "/default_img.jpg";
 
 export const REACTIONS_UI: {
   [key: string]: {
