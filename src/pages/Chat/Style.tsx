@@ -9,6 +9,7 @@ export const Wrapper = styled.div<StyledProps>`
       : color.darkMode.chatBackground};
   @media screen and (max-width: 768px) {
     flex-direction: column;
+    height: 100vh;
   }
 `;
 
