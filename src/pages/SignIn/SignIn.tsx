@@ -1,28 +1,24 @@
 import type { AuthProvider } from "firebase/auth";
-
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { useState } from "react";
 import { Navigate } from "react-router-dom";
-
 import { firebaseAuth } from "../../firebase/firebaseConfig";
-import { useUserStore } from "../../hooks";
 import toast from "react-hot-toast";
-import { ButtonWrapper, Container, TextWrapper, Wrapper } from "./Style";
+import { useUserStore } from "../../hooks/useUserStore";
+import { ButtonWrapper, Wrapper, TextWrapper, Container } from "./Style";
+import { useState } from "react";
 
-export default function SignIn() {
+export default function Signin() {
   const { currentUser } = useUserStore();
-
   const [loading, setLoading] = useState(false);
 
   const handleSignIn = (provider: AuthProvider) => {
     setLoading(true);
-
     signInWithPopup(firebaseAuth, provider)
       .then(() => {
-        console.log("Signed In! ✅");
+        console.log("User signed in successfully!");
       })
       .catch(() => {
-        toast.error(`Something went wrong`);
+        toast.error("Something went wrong!");
       })
       .finally(() => {
         setLoading(false);
